@@ -71,43 +71,77 @@ namespace Lab
             //Console.WriteLine("N_object = " + N_object + "\n");
 
 
-            //B
+            ////B
 
             //Явное преобразование
-            int a = 33, b = 600;   byte c = (byte)(a + b);
+            int a = 33, b = 600; byte c = (byte)(a + b);
             Console.WriteLine("int a = 4, b = 6;   byte c = (byte)(a + b) = " + c + "\n");
 
-            short d = -115;     float e = (float)(d * 2);
-            Console.WriteLine("short d = -115;     float e = (float)(d * 2) = " + e + "\n");
+            //short d = -115; float e = (float)(d * 2);
+            //Console.WriteLine("short d = -115;     float e = (float)(d * 2) = " + e + "\n");
 
-            char f = 'q';       a = (int)f;
-            Console.WriteLine("char f = 'q';       a = (int)f = " + a + "\n");
+            //char f = 'q'; a = (int)f;
+            //Console.WriteLine("char f = 'q';       a = (int)f = " + a + "\n");
 
-            float g = 1.567F;    double h = (double)g;
-            Console.WriteLine("float g = 1.567F;    double h = (double)g = " + h + "\n");
+            //float g = 1.567F; double h = (double)g;
+            //Console.WriteLine("float g = 1.567F;    double h = (double)g = " + h + "\n");
 
-            uint i = 22;        g = (float)i;
-            Console.WriteLine("uint i = 22;        g = (float)i = " + g + "\n");
+            //uint i = 22; g = (float)i;
+            //Console.WriteLine("uint i = 22;        g = (float)i = " + g + "\n");
 
-            //Неявное преобразование 
-            byte aa = 4;     ushort bb = aa;
-            Console.WriteLine("byte aa = 4;     ushort bb = aa = " + bb + "\n");
+            ////Неявное преобразование 
+            //byte aa = 4; ushort bb = aa;
+            //Console.WriteLine("byte aa = 4;     ushort bb = aa = " + bb + "\n");
 
-            sbyte cc = 4;   short dd = cc;
-            Console.WriteLine("sbyte cc = 4;   short dd = cc = " + dd + "\n");
+            //sbyte cc = 4; short dd = cc;
+            //Console.WriteLine("sbyte cc = 4;   short dd = cc = " + dd + "\n");
 
-            char ee = 'w';    int ff = ee;
-            Console.WriteLine("char ee = 'w';    int ff = ee = " + ff + "\n");
+            //char ee = 'w'; int ff = ee;
+            //Console.WriteLine("char ee = 'w';    int ff = ee = " + ff + "\n");
 
-            float gg = 1.78F;   h = gg;
-            Console.WriteLine("float gg = 1.78F;   h = gg = " + h + "\n");
+            //float gg = 1.78F; h = gg;
+            //Console.WriteLine("float gg = 1.78F;   h = gg = " + h + "\n");
 
-            d = -120;      gg = d;
-            Console.WriteLine("d = -120;      gg = d = " + gg + "\n");
-
+            //d = -120; gg = d;
+            //Console.WriteLine("d = -120;      gg = d = " + gg + "\n");
+            
 
             //C
 
+            //Boxing
+            a = 199;    object o = a;
+            //Unboxing
+            o = 121;    a = (int)o; 
+
+
+            //D
+
+            var V1 = 5;
+            Console.WriteLine("Тип переменной var V1 = 5 - " + V1.GetType());
+            var V2 = "Hello world!";
+            Console.WriteLine("Тип переменной var V2 = \"Hello world!\" - " + V2.GetType());
+            var V3 = 10.389;
+            Console.WriteLine("Тип переменной var V3 = 10.389 - " + V3.GetType() + "\n");
+
+
+            //E
+
+            bool? nullable = null;
+            int? nullable2 = null;
+            int? nullable3 = 2;
+            if (!nullable.HasValue)
+                Console.WriteLine("Переменная nullable равна null!");
+            else Console.WriteLine("Переменная nullable НЕ равна null!");
+            //?? возвращает операнд1 в случае если тот не равен значению null, иначе возвращает операнд2.
+            Console.WriteLine("nullable2 ?? 4 = " + (nullable2 ?? 4));
+            Console.WriteLine("nullable3 ?? 4 = " + (nullable3 ?? 4) + "\n");
+
+
+            //F
+
+            var check = 55;
+            //mistake!!
+            //check = "John"; 
         }
     }
 }
