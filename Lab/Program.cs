@@ -10,7 +10,7 @@ namespace Lab
     {
         static void Main(string[] args)
         {
-            //ЗАДАНИЕ 1
+            ////TASK 1
 
             //// А
 
@@ -73,9 +73,9 @@ namespace Lab
 
             ////B
 
-            //Явное преобразование
-            int a = 33, b = 600; byte c = (byte)(a + b);
-            Console.WriteLine("int a = 4, b = 6;   byte c = (byte)(a + b) = " + c + "\n");
+            ////Явное преобразование
+            //int a = 33, b = 600; byte c = (byte)(a + b);
+            //Console.WriteLine("int a = 4, b = 6;   byte c = (byte)(a + b) = " + c + "\n");
 
             //short d = -115; float e = (float)(d * 2);
             //Console.WriteLine("short d = -115;     float e = (float)(d * 2) = " + e + "\n");
@@ -104,44 +104,98 @@ namespace Lab
 
             //d = -120; gg = d;
             //Console.WriteLine("d = -120;      gg = d = " + gg + "\n");
-            
+
+
+            ////C
+
+            ////Boxing
+            //a = 199;    object o = a;
+            ////Unboxing
+            //o = 121;    a = (int)o; 
+
+
+            ////D
+
+            //var V1 = 5;
+            //Console.WriteLine("Тип переменной var V1 = 5 - " + V1.GetType());
+            //var V2 = "Hello world!";
+            //Console.WriteLine("Тип переменной var V2 = \"Hello world!\" - " + V2.GetType());
+            //var V3 = 10.389;
+            //Console.WriteLine("Тип переменной var V3 = 10.389 - " + V3.GetType() + "\n");
+
+
+            ////E
+
+            //bool? nullable = null;
+            //int? nullable2 = null;
+            //int? nullable3 = 2;
+            //if (!nullable.HasValue)
+            //    Console.WriteLine("Переменная nullable равна null!");
+            //else Console.WriteLine("Переменная nullable НЕ равна null!");
+            ////?? возвращает операнд1 в случае если тот не равен значению null, иначе возвращает операнд2.
+            //Console.WriteLine("nullable2 ?? 4 = " + (nullable2 ?? 4));
+            //Console.WriteLine("nullable3 ?? 4 = " + (nullable3 ?? 4) + "\n");
+
+
+            ////F
+
+            //var check = 55;
+            ////mistake!!
+            ////check = "John";
+
+
+            //TASK 2
+
+            //A
+            string s1 = "First C# string!", s2 = "HI";
+            if (Equals(s1, s2))
+                Console.WriteLine("Strings s1 = \"First C# string!\" and s2 = \"HI\" are the same!!!\n");
+            else Console.WriteLine("Strings s1 = \"First C# string!\" and s2 = \"HI\" are NOT the same!!!\n");
+
+            //B
+
+            string s3 = "New line", s4;
+            //Конкатенация=объединение=сцепление
+            s4 = s2 + " " + s3;
+            Console.WriteLine("s4 = " + s4);
+            s4 = String.Concat(s1," ", s3);
+            Console.WriteLine("s4 = "+ s4);
+            //копирование
+            s4 = String.Copy(s2);
+            Console.WriteLine("s4 = " + s4);
+            //выделение подстроки
+            s4 = s1.Substring(6, 2);
+            Console.WriteLine("s4 = " + s4);
+            //разделение строки на слова
+            string[] words = s1.Split(' ');
+            Console.Write("s1 words are : ");
+            for (int ii = 0; ii < words.Length; ii++)
+                Console.Write(words[ii] + " ");
+            //вставка подстроки в заданную позицию
+            s4 = s1.Insert(2, " "+s2+" ");
+            Console.WriteLine("\ns4 = " + s4);
+            //удаление заданной подстроки
+            s4 = s4.Remove(2, s2.Length + 2);
+            Console.WriteLine("s4 = " + s4);
+            //интерполирование строк
+            Console.WriteLine($"Строка 1 - это \"{s1}\"\n");
 
             //C
-
-            //Boxing
-            a = 199;    object o = a;
-            //Unboxing
-            o = 121;    a = (int)o; 
-
+            string s5 = "", s6 = null;
+            if (string.IsNullOrEmpty(s5))
+                Console.WriteLine("Строка s5 null or empty");
+            else Console.WriteLine($"Строка s5 {s5} не null и не empty");
+            if (string.IsNullOrEmpty(s6))
+                Console.WriteLine("Строка s6 null or empty");
+            else Console.WriteLine($"Строка s6 {s6} не null и не empty");
 
             //D
+            StringBuilder s7 = new StringBuilder ("qwerty");
+            s7.Remove(1, 1); s7.Remove(2, 2);
+            Console.WriteLine("\n" + s7);
+            s7.Insert(0, "hahaha"); s7.Insert(s7.Length, "hahaha");
+            Console.WriteLine("\n" + s7);
 
-            var V1 = 5;
-            Console.WriteLine("Тип переменной var V1 = 5 - " + V1.GetType());
-            var V2 = "Hello world!";
-            Console.WriteLine("Тип переменной var V2 = \"Hello world!\" - " + V2.GetType());
-            var V3 = 10.389;
-            Console.WriteLine("Тип переменной var V3 = 10.389 - " + V3.GetType() + "\n");
-
-
-            //E
-
-            bool? nullable = null;
-            int? nullable2 = null;
-            int? nullable3 = 2;
-            if (!nullable.HasValue)
-                Console.WriteLine("Переменная nullable равна null!");
-            else Console.WriteLine("Переменная nullable НЕ равна null!");
-            //?? возвращает операнд1 в случае если тот не равен значению null, иначе возвращает операнд2.
-            Console.WriteLine("nullable2 ?? 4 = " + (nullable2 ?? 4));
-            Console.WriteLine("nullable3 ?? 4 = " + (nullable3 ?? 4) + "\n");
-
-
-            //F
-
-            var check = 55;
-            //mistake!!
-            //check = "John"; 
         }
     }
 }
