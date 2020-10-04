@@ -194,8 +194,62 @@ namespace Lab
             s7.Remove(1, 1); s7.Remove(2, 2);
             Console.WriteLine("\n" + s7);
             s7.Insert(0, "hahaha"); s7.Insert(s7.Length, "hahaha");
-            Console.WriteLine("\n" + s7);
+            Console.WriteLine(s7);
 
+
+            //TASK 3
+
+            //A
+            int[,] numbers = { { 0, 1, 2, 3 }, { 4, 5, 6, 7 }, { 8, 9, 10, 11 } };
+            int rows = 3, cols = numbers.Length / rows;
+            Console.WriteLine("\nМассив numbers");
+            for (int i1 = 0; i1 < rows; i1++ )
+            {
+                for (int j1 = 0; j1 < cols; j1++)
+                    Console.Write($"{numbers[i1, j1]}\t");
+                Console.WriteLine();
+            }
+
+            //B
+            string[] arrString = { "Mon", "Tue", "Wen", "Thurs", "Fri", "Sat", "Sun" };
+            Console.WriteLine("\narrString : ");
+            int i3;
+            for (i3 = 0; i3 < arrString.Length; i3++)
+                Console.Write($"{arrString[i3]}\t");
+            Console.WriteLine($"\narrString lenght is {arrString.Length}");
+            Console.Write("Введите позицию элемента массива, который хотите изменить : "); i3 = Convert.ToInt32(Console.ReadLine()); 
+            Console.Write("Введите слово для замены : ");  arrString[i3-1] = Console.ReadLine();
+            for (i3 = 0; i3 < arrString.Length; i3++)
+                Console.Write($"{arrString[i3]}\t");
+
+            //C
+            int[][] arr = new int[3][];
+            arr[0] = new int[2];
+            arr[1] = new int[3];
+            arr[2] = new int[4];
+            Console.WriteLine("\n\nВведите элементы массива - целые числа : ");
+            for (i3 = 0; i3 < 3; i3++)
+            {
+                //Console.WriteLine(arr[i3].Length);
+                for (int j = 0; j < arr[i3].Length; j++)
+                    arr[i3][j] = Convert.ToInt32(Console.ReadLine());
+            }
+            Console.WriteLine("\nЭлементы массива : ");
+            for (i3 = 0; i3 < 3; i3++)
+            {
+                for (int j = 0; j < arr[i3].Length; j++)
+                    Console.Write($"{arr[i3][j]}\t");
+                Console.WriteLine();
+            }
+
+            //D
+            var ss = "It's an implicitly typed variable.";
+            var aaa = new[] { 1, 2, 3 };
+
+
+            //TASK 4
+
+            //A
         }
     }
 }
