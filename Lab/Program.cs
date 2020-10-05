@@ -197,60 +197,60 @@ namespace Lab
             Console.WriteLine(s7);
 
 
-            //TASK 3
+            ////TASK 3
 
-            //A
-            int[,] numbers = { { 0, 1, 2, 3 }, { 4, 5, 6, 7 }, { 8, 9, 10, 11 } };
-            int rows = 3, cols = numbers.Length / rows;
-            Console.WriteLine("\nМассив numbers");
-            for (int i1 = 0; i1 < rows; i1++ )
-            {
-                for (int j1 = 0; j1 < cols; j1++)
-                    Console.Write($"{numbers[i1, j1]}\t");
-                Console.WriteLine();
-            }
+            ////A
+            //int[,] numbers = { { 0, 1, 2, 3 }, { 4, 5, 6, 7 }, { 8, 9, 10, 11 } };
+            //int rows = 3, cols = numbers.Length / rows;
+            //Console.WriteLine("\nМассив numbers");
+            //for (int i1 = 0; i1 < rows; i1++ )
+            //{
+            //    for (int j1 = 0; j1 < cols; j1++)
+            //        Console.Write($"{numbers[i1, j1]}\t");
+            //    Console.WriteLine();
+            //}
 
-            //B
-            string[] arrString = { "Mon", "Tue", "Wen", "Thurs", "Fri", "Sat", "Sun" };
-            Console.WriteLine("\narrString : ");
-            int i3;
-            for (i3 = 0; i3 < arrString.Length; i3++)
-                Console.Write($"{arrString[i3]}\t");
-            Console.WriteLine($"\narrString lenght is {arrString.Length}");
-            Console.Write("Введите позицию элемента массива, который хотите изменить : "); i3 = Convert.ToInt32(Console.ReadLine()); 
-            Console.Write("Введите слово для замены : ");  arrString[i3-1] = Console.ReadLine();
-            for (i3 = 0; i3 < arrString.Length; i3++)
-                Console.Write($"{arrString[i3]}\t");
+            ////B
+            //string[] arrString = { "Mon", "Tue", "Wen", "Thurs", "Fri", "Sat", "Sun" };
+            //Console.WriteLine("\narrString : ");
+            //int i3;
+            //for (i3 = 0; i3 < arrString.Length; i3++)
+            //    Console.Write($"{arrString[i3]}\t");
+            //Console.WriteLine($"\narrString lenght is {arrString.Length}");
+            //Console.Write("Введите позицию элемента массива, который хотите изменить : "); i3 = Convert.ToInt32(Console.ReadLine()); 
+            //Console.Write("Введите слово для замены : ");  arrString[i3-1] = Console.ReadLine();
+            //for (i3 = 0; i3 < arrString.Length; i3++)
+            //    Console.Write($"{arrString[i3]}\t");
 
-            //C
-            int[][] arr = new int[3][];
-            arr[0] = new int[2];
-            arr[1] = new int[3];
-            arr[2] = new int[4];
-            Console.WriteLine("\n\nВведите элементы массива - целые числа : ");
-            for (i3 = 0; i3 < 3; i3++)
-            {
-                //Console.WriteLine(arr[i3].Length);
-                for (int j = 0; j < arr[i3].Length; j++)
-                    arr[i3][j] = Convert.ToInt32(Console.ReadLine());
-            }
-            Console.WriteLine("\nЭлементы массива : ");
-            for (i3 = 0; i3 < 3; i3++)
-            {
-                for (int j = 0; j < arr[i3].Length; j++)
-                    Console.Write($"{arr[i3][j]}\t");
-                Console.WriteLine();
-            }
+            ////C
+            //int[][] arr = new int[3][];
+            //arr[0] = new int[2];
+            //arr[1] = new int[3];
+            //arr[2] = new int[4];
+            //Console.WriteLine("\n\nВведите элементы массива - целые числа : ");
+            //for (i3 = 0; i3 < 3; i3++)
+            //{
+            //    //Console.WriteLine(arr[i3].Length);
+            //    for (int j = 0; j < arr[i3].Length; j++)
+            //        arr[i3][j] = Convert.ToInt32(Console.ReadLine());
+            //}
+            //Console.WriteLine("\nЭлементы массива : ");
+            //for (i3 = 0; i3 < 3; i3++)
+            //{
+            //    for (int j = 0; j < arr[i3].Length; j++)
+            //        Console.Write($"{arr[i3][j]}\t");
+            //    Console.WriteLine();
+            //}
 
-            //D
-            var ss = "It's an implicitly typed variable.";
-            var aaa = new[] { 1, 2, 3 };
+            ////D
+            //var ss = "It's an implicitly typed variable.";
+            //var aaa = new[] { 1, 2, 3 };
 
 
             ////TASK 4
 
             ////A
-            //(int, string, char , string , ulong ) tuple = (10, "sunny", 'q', "day", 5672912);
+            //(int, string, char, string, ulong) tuple = (10, "sunny", 'q', "day", 5672912);
 
             ////B
             //Console.WriteLine($"{tuple.Item1}\t{tuple.Item2}\t{tuple.Item3}\t{tuple.Item4}\t{tuple.Item5}");
@@ -273,24 +273,50 @@ namespace Lab
             //else Console.WriteLine("The tuples are NOT equal");
 
 
-            //TASK 5
+            ////TASK 5
 
-            (int, int, int, char) function_tuple (int[] array, string line)
+            //(int, int, int, char) function_tuple ()
+            //{                
+            //    (int , int , int , char ) tuple;
+            //    int[] array = { 0, 1, -3, 578, -21, 2, 654 };
+            //    string line = "It's my first C# function.";
+            //    tuple.Item1 = array[0]; tuple.Item2 = array[0]; tuple.Item3 = 0;
+            //    for (int i = 0; i < array.Length; i++)
+            //    {
+            //        if (array[i] > tuple.Item1)
+            //            tuple.Item1 = array[i];
+            //        if (array[i] < tuple.Item2)
+            //            tuple.Item2 = array[i];
+            //        tuple.Item3 += array[i];
+            //    }
+            //    tuple.Item4 = line[0];
+            //    return tuple;
+            //}
+
+
+            //TASK 6
+
+            void func1()
             {
-                //(int min, int max, int sum, char letter) tuple;
-                (int , int , int , char ) tuple;
-                tuple.Item1 = array[0]; tuple.Item2 = array[0]; tuple.Item3 = 0;
-                for (int i = 0; i < array.Length; i++)
+                int ten = 10;
+                checked
                 {
-                    if (array[i] > tuple.Item1)
-                        tuple.Item1 = array[i];
-                    if (array[i] < tuple.Item2)
-                        tuple.Item2 = array[i];
-                    tuple.Item3 += array[i];
+                    int max_int = int.MaxValue + ten;
+                    Console.WriteLine(max_int);
                 }
-                tuple.Item4 = line[0];
-                return tuple;
             }
+
+            void func2()
+            {
+                int max_int;
+                unchecked
+                {
+                    max_int = int.MaxValue + 10;
+                    Console.WriteLine(max_int);
+                }
+            }
+
+            func1(); func2();
         }
     }
 }
