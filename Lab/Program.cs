@@ -250,6 +250,32 @@ namespace Lab
             //TASK 4
 
             //A
+            (int, string, char , string , ulong ) tuple = (10, "sunny", 'q', "day", 5672912);
+
+            //B
+            Console.WriteLine($"{tuple.Item1}\t{tuple.Item2}\t{tuple.Item3}\t{tuple.Item4}\t{tuple.Item5}");
+            Console.WriteLine($"{tuple.Item1}\t{tuple.Item3}\t{tuple.Item4}\t");
+
+            //C
+            int num1 = tuple.Item1;
+            string str1 = tuple.Item2, str2 = tuple.Item4;
+            char ch1 = tuple.Item3;
+            ulong ul1 = tuple.Item5;
+
+            (int num11, string str11, char char11, string str22, ulong ul11) = tuple;
+
+            (int, string, char, string, ulong) tuple2 = (5, "cold", 'o', "water", 43561);
+            (int22, str33, _, _, ul22) = tuple2;
+
+            //D
+            if (tuple.Equals(tuple2))
+                Console.WriteLine("The tuples are equal");
+            else Console.WriteLine("The tuples are NOT equal");
+
+
+            //TASK 5
+
+
         }
     }
 }
