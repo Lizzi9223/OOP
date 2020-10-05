@@ -247,35 +247,50 @@ namespace Lab
             var aaa = new[] { 1, 2, 3 };
 
 
-            //TASK 4
+            ////TASK 4
 
-            //A
-            (int, string, char , string , ulong ) tuple = (10, "sunny", 'q', "day", 5672912);
+            ////A
+            //(int, string, char , string , ulong ) tuple = (10, "sunny", 'q', "day", 5672912);
 
-            //B
-            Console.WriteLine($"{tuple.Item1}\t{tuple.Item2}\t{tuple.Item3}\t{tuple.Item4}\t{tuple.Item5}");
-            Console.WriteLine($"{tuple.Item1}\t{tuple.Item3}\t{tuple.Item4}\t");
+            ////B
+            //Console.WriteLine($"{tuple.Item1}\t{tuple.Item2}\t{tuple.Item3}\t{tuple.Item4}\t{tuple.Item5}");
+            //Console.WriteLine($"{tuple.Item1}\t{tuple.Item3}\t{tuple.Item4}\t");
 
-            //C
-            int num1 = tuple.Item1;
-            string str1 = tuple.Item2, str2 = tuple.Item4;
-            char ch1 = tuple.Item3;
-            ulong ul1 = tuple.Item5;
+            ////C
+            //int num1 = tuple.Item1;
+            //string str1 = tuple.Item2, str2 = tuple.Item4;
+            //char ch1 = tuple.Item3;
+            //ulong ul1 = tuple.Item5;
 
-            (int num11, string str11, char char11, string str22, ulong ul11) = tuple;
+            //(int num11, string str11, char char11, string str22, ulong ul11) = tuple;
 
-            (int, string, char, string, ulong) tuple2 = (5, "cold", 'o', "water", 43561);
-            (int22, str33, _, _, ul22) = tuple2;
+            //(int, string, char, string, ulong) tuple2 = (5, "cold", 'o', "water", 43561);
+            //(int22, str33, _, _, ul22) = tuple2;
 
-            //D
-            if (tuple.Equals(tuple2))
-                Console.WriteLine("The tuples are equal");
-            else Console.WriteLine("The tuples are NOT equal");
+            ////D
+            //if (tuple.Equals(tuple2))
+            //    Console.WriteLine("The tuples are equal");
+            //else Console.WriteLine("The tuples are NOT equal");
 
 
             //TASK 5
 
-
+            (int, int, int, char) function_tuple (int[] array, string line)
+            {
+                //(int min, int max, int sum, char letter) tuple;
+                (int , int , int , char ) tuple;
+                tuple.Item1 = array[0]; tuple.Item2 = array[0]; tuple.Item3 = 0;
+                for (int i = 0; i < array.Length; i++)
+                {
+                    if (array[i] > tuple.Item1)
+                        tuple.Item1 = array[i];
+                    if (array[i] < tuple.Item2)
+                        tuple.Item2 = array[i];
+                    tuple.Item3 += array[i];
+                }
+                tuple.Item4 = line[0];
+                return tuple;
+            }
         }
     }
 }
